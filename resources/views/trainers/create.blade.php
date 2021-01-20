@@ -7,10 +7,11 @@
     hellow world from my first view.
 </h1>
 <div class="container">
-    <form action=""> 
+    <form class="form-group" method="POST" action="/trainers"> 
+        @csrf
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control " id="nombre" >
+            <input type="text" class="form-control " name="name" id="nombre" >
           </div>
           <button type="submit" class="btn btn-primary mt-5">Submit</button>
     </form>
