@@ -11,7 +11,7 @@
         @csrf
         <div class="form-group">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control " name="name" id="nombre" >
+            <input type="text" class="form-control " name="name" >
           </div>
           <button type="submit" class="btn btn-primary mt-5">Submit</button>
     </form>

@@ -27,7 +27,7 @@ class TrainerController extends Controller
         return view('trainers.create');
     }
 
-    /**
+    /*
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
@@ -36,11 +36,11 @@ class TrainerController extends Controller
     public function store(Request $request)
     {
         $trainer = new Trainer();
-        $trainer->name = $$request->input('name');
+        $trainer->name = $request->input('name');
         $trainer->save();
         return 'Saved o Guardado';
 
-        // return $request->all();
+         //return $request->all();
     }
 
     /**
