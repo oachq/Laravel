@@ -4,17 +4,18 @@
     
 @section('content')
 <h1>
-    hellow world from my first view.
-</h1>
+    Hellow world, TEXLAVE
+</h1>    
+@if ($errors -> any())
+<div class="alert alert-danger">
+@foreach ($errors->all() as $err)
+    <p>{{$err}} </p>    
+@endforeach
+</div>
+@endif
 <div class="container">
-    <form class="form-group" method="POST" action="/trainers"> 
-        @csrf
-        <div class="form-group">
-            <label for="nombre">Nombre</label>
-            <input type="text" class="form-control " name="name" >
-          </div>
-          <button type="submit" class="btn btn-primary mt-5">Submit</button>
-    </form>
-   
+
+ @include('trainers.form')
+<!-- se agrego la plantilla del formulario del archivo form.blade.php-->
 </div>
 @endsection
