@@ -15,8 +15,9 @@ class TrainerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+       // $request->user()->authorizeRoles(['User']); 
         $trainers = Trainer::all();
         return view('trainers.index', compact('trainers'));
     }
